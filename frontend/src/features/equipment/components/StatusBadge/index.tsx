@@ -1,4 +1,4 @@
-import type { EquipmentStatus } from '../../types/equipamento'
+import type { EquipmentStatus } from '../../types/equipment'
 import { StatusTag } from './styles'
 
 interface StatusBadgeProps {

@@ -1,6 +1,6 @@
 import SearchOutlined from '@mui/icons-material/SearchOutlined'
 import { Button, Input, Select } from 'antd'
-import type { EquipmentStatus, EquipmentType } from '../../types/equipamento'
+import type { EquipmentStatus, EquipmentType } from '../../types/equipment'
 import { Field, FieldLabel, FilterCard, FiltersGrid } from './styles'
 
 interface EquipmentFiltersProps {

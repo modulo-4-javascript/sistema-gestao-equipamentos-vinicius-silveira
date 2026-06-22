@@ -6,9 +6,7 @@ import { Logo, MenuList, NavSider, Subtitle, Title } from './styles'
 export function Sidebar() {
   const location = useLocation()
   const navigate = useNavigate()
-  const selectedKey = location.pathname.startsWith('/localizacoes')
-    ? '/localizacoes'
-    : '/equipamentos'
+  const selectedKey = location.pathname.startsWith('/locations') ? '/locations' : '/equipment'
 
   return (
     <NavSider width={280}>
@@ -24,12 +22,12 @@ export function Sidebar() {
         onClick={({ key }) => navigate(key)}
         items={[
           {
-            key: '/equipamentos',
+            key: '/equipment',
             icon: <PrecisionManufacturingOutlined fontSize="small" />,
             label: 'Equipamentos',
           },
           {
-            key: '/localizacoes',
+            key: '/locations',
             icon: <PinDropOutlined fontSize="small" />,
             label: 'Localizações',
           },

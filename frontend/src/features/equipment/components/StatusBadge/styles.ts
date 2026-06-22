@@ -1,6 +1,6 @@
 import { Tag } from 'antd'
 import styled from 'styled-components'
-import type { EquipmentStatus } from '../../types/equipamento'
+import type { EquipmentStatus } from '../../types/equipment'
 
 interface StatusTagProps {
   $status: EquipmentStatus

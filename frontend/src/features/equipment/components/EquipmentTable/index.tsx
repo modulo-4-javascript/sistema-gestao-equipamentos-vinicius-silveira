@@ -5,7 +5,7 @@ import MoreHorizOutlined from '@mui/icons-material/MoreHorizOutlined'
 import VisibilityOutlined from '@mui/icons-material/VisibilityOutlined'
 import { Dropdown, Table } from 'antd'
 import type { TableProps } from 'antd'
-import type { Equipment } from '../../types/equipamento'
+import type { Equipment } from '../../types/equipment'
 import { StatusBadge } from '../StatusBadge'
 import {
   ActionButton,

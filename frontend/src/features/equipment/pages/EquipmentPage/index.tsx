@@ -6,15 +6,15 @@ import { EquipmentTable } from '../../components/EquipmentTable'
 import { PageHeader } from '../../components/PageHeader'
 import { SummaryCards } from '../../components/SummaryCards'
 import {
-  equipamentosMock,
-  resumoEquipamentosMock,
+  equipmentMock,
+  equipmentSummaryMock,
   statusOptions,
-  tipoOptions,
-} from '../../mocks/equipamentos.mock'
-import type { EquipmentStatus, EquipmentType } from '../../types/equipamento'
+  typeOptions,
+} from '../../mocks/equipment.mock'
+import type { EquipmentStatus, EquipmentType } from '../../types/equipment'
 import { Container } from './styles'
 
-export function EquipamentosPage() {
+export function EquipmentPage() {
   const [messageApi, contextHolder] = message.useMessage()
 
   // Estados dos filtros. Cada campo da área de filtros controla um estado aqui.
@@ -36,7 +36,7 @@ export function EquipamentosPage() {
 
   // AULA 05 - parte prática:
   // Primeiro deixamos a lista sem filtro para a tela aparecer.
-  const equipamentosVisiveis = equipamentosMock
+  const visibleEquipment = equipmentMock
 
   return (
     <AppLayout currentPage="Equipamentos">
@@ -46,7 +46,7 @@ export function EquipamentosPage() {
         <PageHeader onCreateEquipment={handleCreateEquipment} />
 
         {/* Cards de resumo: usam dados mockados para simular indicadores do sistema. */}
-        <SummaryCards summaries={resumoEquipamentosMock} />
+        <SummaryCards summaries={equipmentSummaryMock} />
 
         {/* Filtros controlados: os valores ficam nesta página e são enviados por props. */}
         <EquipmentFilters
@@ -54,7 +54,7 @@ export function EquipamentosPage() {
           selectedStatus={selectedStatus}
           selectedType={selectedType}
           statusOptions={statusOptions}
-          typeOptions={tipoOptions}
+          typeOptions={typeOptions}
           onSearchChange={setSearchText}
           onStatusChange={setSelectedStatus}
           onTypeChange={setSelectedType}
@@ -62,7 +62,7 @@ export function EquipamentosPage() {
         />
 
         {/* Tabela principal: recebe a lista que, depois, será filtrada. */}
-        <EquipmentTable equipments={equipamentosVisiveis} />
+        <EquipmentTable equipments={visibleEquipment} />
       </Container>
     </AppLayout>
   )

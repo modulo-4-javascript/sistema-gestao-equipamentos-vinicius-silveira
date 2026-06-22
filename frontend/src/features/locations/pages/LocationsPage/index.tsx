@@ -1,14 +1,14 @@
 import { AppLayout } from '../../../../app/layout/AppLayout'
-import { Container, Description, Title } from './styles'
+import { Container } from './styles'
 
-export function LocalizacoesPage() {
+export function LocationsPage() {
   return (
     <AppLayout currentPage="Localizações">
       <Container>
-        <Title>Localizações</Title>
+        {/* <Title>Localizações</Title>
         <Description>
           Esta página simples existe para demonstrar rotas e reaproveitamento do layout.
-        </Description>
+        </Description> */}
       </Container>
     </AppLayout>
   )

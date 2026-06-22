@@ -2,7 +2,7 @@ import BlockOutlined from '@mui/icons-material/BlockOutlined'
 import BuildOutlined from '@mui/icons-material/BuildOutlined'
 import CheckCircleOutlineOutlined from '@mui/icons-material/CheckCircleOutlineOutlined'
 import Inventory2Outlined from '@mui/icons-material/Inventory2Outlined'
-import type { EquipmentSummary, SummaryIconName } from '../../types/equipamento'
+import type { EquipmentSummary, SummaryIconName } from '../../types/equipment'
 import { CardContent, CardHeader, Grid, IconBox, Label, SummaryCard, Value } from './styles'
 
 interface SummaryCardsProps {

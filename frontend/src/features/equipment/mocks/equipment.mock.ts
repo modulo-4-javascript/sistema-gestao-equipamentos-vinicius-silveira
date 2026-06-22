@@ -3,11 +3,11 @@ import type {
   EquipmentStatus,
   EquipmentSummary,
   EquipmentType,
-} from '../types/equipamento'
+} from '../types/equipment'
 
 // Este mock simula os dados que aparecerão na tabela durante a aula.
 // Para a aula, mantemos poucos itens para ficar fácil enxergar o que mudou na tela.
-export const equipamentosMock: Equipment[] = [
+export const equipmentMock: Equipment[] = [
   {
     id: 'EQP-001',
     name: 'Notebook Dell',
@@ -72,7 +72,7 @@ export const equipamentosMock: Equipment[] = [
 
 // Estes números também estão mockados.
 // Eles alimentam os cards de resumo da interface.
-export const resumoEquipamentosMock: EquipmentSummary[] = [
+export const equipmentSummaryMock: EquipmentSummary[] = [
   {
     id: 'total',
     title: 'Total',
@@ -111,7 +111,7 @@ export const resumoEquipamentosMock: EquipmentSummary[] = [
 // Deixar separado evita repetir textos dentro do componente.
 export const statusOptions: EquipmentStatus[] = ['Disponível', 'Em manutenção', 'Inativo']
 
-export const tipoOptions: EquipmentType[] = [
+export const typeOptions: EquipmentType[] = [
   'Informática',
   'Imagem',
   'Laboratório',

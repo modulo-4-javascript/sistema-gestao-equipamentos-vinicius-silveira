@@ -22,8 +22,8 @@ Ao final da aula, os alunos devem entender:
 O que faz parte desta aula:
 
 - Layout geral da aplicação com `Sidebar`, `Header` e área de conteúdo.
-- Rota `/equipamentos`.
-- Rota `/localizacoes`.
+- Rota `/equipment`.
+- Rota `/locations`.
 - Página simples de localizações para demonstrar navegação.
 - Tela visual de equipamentos.
 - Cards de resumo.
@@ -58,12 +58,12 @@ frontend/src
 │   └── theme
 │       └── appTheme.ts
 └── features
-    ├── equipamentos
+    ├── equipment
     │   ├── components
     │   ├── mocks
     │   ├── pages
     │   └── types
-    └── localizacoes
+    └── locations
         └── pages
 ```
 
@@ -80,7 +80,7 @@ NomeDoComponente
 Exemplo:
 
 ```txt
-frontend/src/features/equipamentos/components/EquipmentFilters
+frontend/src/features/equipment/components/EquipmentFilters
 ├── index.tsx
 └── styles.ts
 ```
@@ -127,13 +127,13 @@ frontend/src/app/routes.tsx
 Rotas da Aula 05:
 
 ```txt
-/equipamentos
-/localizacoes
+/equipment
+/locations
 ```
 
-A rota `/` redireciona para `/equipamentos`.
+A rota `/` redireciona para `/equipment`.
 
-A rota `/localizacoes` existe para mostrar que o mesmo layout pode ser reutilizado por outra página, mesmo que a tela ainda tenha apenas um texto simples.
+A rota `/locations` existe para mostrar que o mesmo layout pode ser reutilizado por outra página, mesmo que a tela ainda tenha apenas um texto simples.
 
 ## Layout compartilhado
 
@@ -158,26 +158,26 @@ Ponto importante:
 Pasta:
 
 ```txt
-frontend/src/features/equipamentos
+frontend/src/features/equipment
 ```
 
 Principais partes:
 
-- `pages/EquipamentosPage`: página principal da feature.
+- `pages/EquipmentPage`: página principal da feature.
 - `components/PageHeader`: título, descrição e botão principal.
 - `components/SummaryCards`: cards de resumo.
 - `components/EquipmentFilters`: filtros visuais.
 - `components/EquipmentTable`: tabela visual.
 - `components/StatusBadge`: tag visual de status.
-- `mocks/equipamentos.mock.ts`: dados simples para renderizar a tela.
-- `types/equipamento.ts`: tipos usados na feature.
+- `mocks/equipment.mock.ts`: dados simples para renderizar a tela.
+- `types/equipment.ts`: tipos usados na feature.
 
 ## Feature de localizações
 
 Pasta:
 
 ```txt
-frontend/src/features/localizacoes
+frontend/src/features/locations
 ```
 
 Nesta aula, a página de localizações é propositalmente simples. Ela serve para demonstrar:
@@ -191,9 +191,9 @@ Nesta aula, a página de localizações é propositalmente simples. Ela serve pa
 
 1. Abrir o Figma e identificar as áreas da tela.
 2. Mostrar `App.tsx` e explicar os providers.
-3. Mostrar `routes.tsx` e explicar `/equipamentos` e `/localizacoes`.
+3. Mostrar `routes.tsx` e explicar `/equipment` e `/locations`.
 4. Mostrar `AppLayout`, `Sidebar` e `Header`.
-5. Abrir `/equipamentos` no navegador.
+5. Abrir `/equipment` no navegador.
 6. Mostrar a estrutura da feature de equipamentos.
 7. Mostrar os mocks.
 8. Mostrar `PageHeader`.
@@ -201,7 +201,7 @@ Nesta aula, a página de localizações é propositalmente simples. Ela serve pa
 10. Mostrar `EquipmentFilters`.
 11. Mostrar `EquipmentTable`.
 12. Mostrar `StatusBadge`.
-13. Abrir `/localizacoes` e mostrar que o layout foi reaproveitado.
+13. Abrir `/locations` e mostrar que o layout foi reaproveitado.
 14. Revisar a organização dos arquivos.
 
 ## Checklist para os alunos
