@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const TableCard = styled(Card)`
   &.ant-card {
-    border-color: var(--border-default);
+    border-color: #dde6ee;
     box-shadow: 0 1px 2px rgb(17 24 39 / 5%);
   }
 
@@ -25,14 +25,14 @@ export const EquipmentIcon = styled.span`
   flex: 0 0 32px;
   align-items: center;
   justify-content: center;
-  color: var(--brand-primary);
-  background: var(--info-bg);
+  color: #002a64;
+  background: #e6f4ff;
   border-radius: 8px;
 `
 
 export const EquipmentName = styled.strong`
   display: block;
-  color: var(--text-primary);
+  color: #111827;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
@@ -40,7 +40,7 @@ export const EquipmentName = styled.strong`
 
 export const EquipmentCode = styled.small`
   display: block;
-  color: var(--text-muted);
+  color: #6b7280;
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   font-size: 12px;
   line-height: 18px;
@@ -48,6 +48,6 @@ export const EquipmentCode = styled.small`
 
 export const ActionButton = styled(Button)`
   &.ant-btn {
-    color: var(--text-muted);
+    color: #6b7280;
   }
 `

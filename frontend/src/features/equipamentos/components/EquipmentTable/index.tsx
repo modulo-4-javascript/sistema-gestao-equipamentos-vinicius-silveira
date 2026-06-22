@@ -18,13 +18,6 @@ import {
 
 interface EquipmentTableProps {
   equipments: Equipment[]
-
-  // AULA 06:
-  // Quando as ações da tabela ficarem reais, podemos receber callbacks por props.
-  //
-  // onViewEquipment?: (equipmentId: string) => void
-  // onEditEquipment?: (equipmentId: string) => void
-  // onRemoveEquipment?: (equipmentId: string) => void
 }
 
 const actionLabelByKey: Record<string, string> = {
@@ -35,10 +28,7 @@ const actionLabelByKey: Record<string, string> = {
 
 function handleActionClick(action: string, equipmentName: string) {
   // Por enquanto usamos alert para mostrar que o clique funciona.
-  // Na próxima etapa, essa função será trocada por navegação, modal ou confirmação.
-  window.alert(
-    `Ação "${actionLabelByKey[action]}" para ${equipmentName}. Vamos implementar essa parte durante a aula.`,
-  )
+  window.alert(`Ação "${actionLabelByKey[action]}" para ${equipmentName}.`)
 }
 
 // As colunas dizem para o Ant Design como a tabela deve montar cada campo.
@@ -101,23 +91,17 @@ const columns: TableProps<Equipment>['columns'] = [
               key: 'view',
               icon: <VisibilityOutlined fontSize="small" />,
               label: 'Visualizar',
-              // AULA 06:
-              // Aqui vamos chamar onViewEquipment?.(equipment.id)
             },
             {
               key: 'edit',
               icon: <EditOutlined fontSize="small" />,
               label: 'Editar',
-              // AULA 06:
-              // Aqui vamos chamar onEditEquipment?.(equipment.id)
             },
             {
               key: 'remove',
               icon: <DeleteOutlineOutlined fontSize="small" />,
               label: 'Remover',
               danger: true,
-              // AULA 06:
-              // Aqui vamos abrir uma confirmação antes de remover.
             },
           ],
         }}

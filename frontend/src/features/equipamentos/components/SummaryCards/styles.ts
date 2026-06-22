@@ -29,7 +29,7 @@ export const SummaryCard = styled(Card)<SummaryCardProps>`
     position: relative;
     overflow: hidden;
     min-height: 160px;
-    border-color: var(--border-default);
+    border-color: #dde6ee;
     box-shadow: 0 1px 2px rgb(17 24 39 / 5%);
   }
 
@@ -57,7 +57,7 @@ export const CardHeader = styled.div`
 `
 
 export const Label = styled.span`
-  color: var(--text-muted);
+  color: #6b7280;
   font-size: 14px;
   font-weight: 500;
 `
@@ -68,13 +68,13 @@ export const IconBox = styled.span<IconBoxProps>`
   height: 40px;
   align-items: center;
   justify-content: center;
-  color: var(--brand-primary);
+  color: #002a64;
   background: ${({ $iconBackground }) => $iconBackground};
   border-radius: 8px;
 `
 
 export const Value = styled.strong`
-  color: var(--text-primary);
+  color: #111827;
   font-size: 36px;
   font-weight: 700;
   line-height: 54px;

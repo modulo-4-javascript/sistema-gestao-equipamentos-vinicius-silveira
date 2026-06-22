@@ -2,8 +2,8 @@ import { Layout, Menu } from 'antd'
 import styled from 'styled-components'
 
 export const NavSider = styled(Layout.Sider)`
-  background: var(--surface-base) !important;
-  border-right: 1px solid var(--border-default);
+  background: #ffffff !important;
+  border-right: 1px solid #dde6ee;
   box-shadow: 1px 0 8px rgb(17 24 39 / 4%);
 
   @media (max-width: 800px) {
@@ -23,7 +23,7 @@ export const Logo = styled.div`
 
 export const Title = styled.h1`
   margin: 0;
-  color: var(--brand-primary);
+  color: #002a64;
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
@@ -31,7 +31,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.p`
   margin: 4px 0 0;
-  color: var(--text-muted);
+  color: #6b7280;
   font-size: 14px;
   line-height: 18px;
 `
@@ -45,13 +45,13 @@ export const MenuList = styled(Menu)`
   .ant-menu-item {
     height: 45px;
     margin-inline: 0;
-    color: var(--text-muted);
+    color: #6b7280;
     border-radius: 8px;
   }
 
   .ant-menu-item-selected {
-    background: var(--info-bg);
-    color: var(--brand-primary);
+    background: #e6f4ff;
+    color: #002a64;
     font-weight: 700;
   }
 

@@ -76,15 +76,6 @@ export function EquipmentFilters({
         </Field>
 
         <Button onClick={onClear}>Limpar filtros</Button>
-
-        {/* AULA 06:
-            Podemos adicionar um botão de busca manual se quisermos mostrar
-            a diferença entre filtro automático e filtro por clique.
-
-            <Button type="primary" onClick={onApplyFilters}>
-              Buscar
-            </Button>
-        */}
       </FiltersGrid>
     </FilterCard>
   )

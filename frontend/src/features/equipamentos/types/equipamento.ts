@@ -30,19 +30,3 @@ export interface EquipmentSummary {
   lineColor: string
   iconBackground: string
 }
-
-// AULA 06 OU 07:
-// Quando criarmos a tela de detalhes, podemos descomentar e evoluir estes tipos.
-//
-// export interface EquipmentDetails extends Equipment {
-//   responsible: string
-//   createdAt: string
-//   notes: string
-// }
-//
-// export interface EquipmentHistoryItem {
-//   id: number
-//   date: string
-//   title: string
-//   description: string
-// }

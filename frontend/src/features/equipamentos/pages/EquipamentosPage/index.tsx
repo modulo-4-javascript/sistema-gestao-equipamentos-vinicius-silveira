@@ -22,19 +22,9 @@ export function EquipamentosPage() {
   const [selectedStatus, setSelectedStatus] = useState<EquipmentStatus>()
   const [selectedType, setSelectedType] = useState<EquipmentType>()
 
-  // AULA 06:
-  // Base do modal/formulário. Está comentada para a Aula 05 focar na listagem.
-  //
-  // const [isFormOpen, setIsFormOpen] = useState(false)
-  // const [selectedEquipmentId, setSelectedEquipmentId] = useState<string>()
-
   function handleCreateEquipment() {
-    // TODO: vamos completar essa parte durante a aula.
-    //
-    // Quando chegar a hora do formulário, vamos trocar a mensagem por:
-    // setSelectedEquipmentId(undefined)
-    // setIsFormOpen(true)
-    messageApi.info('O formulário de novo equipamento será criado junto com a turma.')
+    // Nesta aula, o botão existe para montarmos o visual do cabeçalho.
+    messageApi.info('Nesta aula vamos focar na construção visual da tela.')
   }
 
   function handleClearFilters() {
@@ -47,33 +37,6 @@ export function EquipamentosPage() {
   // AULA 05 - parte prática:
   // Primeiro deixamos a lista sem filtro para a tela aparecer.
   const equipamentosVisiveis = equipamentosMock
-
-  // Depois, descomentamos este bloco para aplicar busca, status e tipo.
-  //
-  // const equipamentosVisiveis = equipamentosMock.filter((equipamento) => {
-  //   const busca = searchText.toLowerCase()
-  //
-  //   const correspondeBusca =
-  //     equipamento.name.toLowerCase().includes(busca) ||
-  //     equipamento.model.toLowerCase().includes(busca) ||
-  //     equipamento.id.toLowerCase().includes(busca)
-  //
-  //   const correspondeStatus = selectedStatus
-  //     ? equipamento.status === selectedStatus
-  //     : true
-  //
-  //   const correspondeTipo = selectedType ? equipamento.type === selectedType : true
-  //
-  //   return correspondeBusca && correspondeStatus && correspondeTipo
-  // })
-
-  // AULA 06:
-  // Quando a tabela tiver ações reais, podemos criar funções assim:
-  //
-  // function handleEditEquipment(equipmentId: string) {
-  //   setSelectedEquipmentId(equipmentId)
-  //   setIsFormOpen(true)
-  // }
 
   return (
     <AppLayout currentPage="Equipamentos">
@@ -100,16 +63,6 @@ export function EquipamentosPage() {
 
         {/* Tabela principal: recebe a lista que, depois, será filtrada. */}
         <EquipmentTable equipments={equipamentosVisiveis} />
-
-        {/* AULA 06:
-            Futuro modal de cadastro/edição. Deixamos comentado para criar ao vivo.
-
-            <EquipmentFormModal
-              open={isFormOpen}
-              equipmentId={selectedEquipmentId}
-              onClose={() => setIsFormOpen(false)}
-            />
-        */}
       </Container>
     </AppLayout>
   )

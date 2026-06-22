@@ -7,13 +7,13 @@ export const HeaderContainer = styled(Layout.Header)`
   z-index: 10;
   height: 64px;
   padding: 0 24px;
-  background: var(--surface-base);
-  border-bottom: 1px solid var(--border-default);
+  background: #ffffff;
+  border-bottom: 1px solid #dde6ee;
   display: flex;
   align-items: center;
 `
 
 export const PageBreadcrumb = styled(Breadcrumb)`
   padding-left: 8px;
-  border-left: 1px solid var(--border-default);
+  border-left: 1px solid #dde6ee;
 `

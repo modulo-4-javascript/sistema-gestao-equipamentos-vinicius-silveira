@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const FilterCard = styled(Card)`
   &.ant-card {
     margin-bottom: 32px;
-    border-color: var(--border-default);
+    border-color: #dde6ee;
     box-shadow: 0 1px 2px rgb(17 24 39 / 5%);
   }
 `
@@ -31,7 +31,7 @@ export const Field = styled.label`
 export const FieldLabel = styled.span`
   display: block;
   margin-bottom: 6px;
-  color: var(--text-primary);
+  color: #111827;
   font-size: 12px;
   font-weight: 700;
 `

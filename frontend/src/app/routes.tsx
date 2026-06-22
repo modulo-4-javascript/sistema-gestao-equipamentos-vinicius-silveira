@@ -1,9 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { EquipamentosPage } from '../features/equipamentos/pages/EquipamentosPage'
-// AULA 06 OU 07:
-// Quando criarmos a tela de detalhes, vamos descomentar o import abaixo.
-//
-// import { EquipamentoDetalhesPage } from '../features/equipamentos/pages/EquipamentoDetalhesPage'
+import { LocalizacoesPage } from '../features/localizacoes/pages/LocalizacoesPage'
 
 export function AppRoutes() {
   return (
@@ -14,11 +11,8 @@ export function AppRoutes() {
       {/* Esta rota permite acessar a tela principal da feature */}
       <Route path="/equipamentos" element={<EquipamentosPage />} />
 
-      {/* AULA 06 OU 07:
-          Futura rota de detalhes. Vamos criar a página e descomentar esta linha.
-
-          <Route path="/equipamentos/:id" element={<EquipamentoDetalhesPage />} />
-      */}
+      {/* Esta rota mostra que o layout pode ser compartilhado por mais de uma página */}
+      <Route path="/localizacoes" element={<LocalizacoesPage />} />
 
       {/* Qualquer rota desconhecida volta para equipamentos para evitar tela em branco. */}
       <Route path="*" element={<Navigate to="/equipamentos" replace />} />

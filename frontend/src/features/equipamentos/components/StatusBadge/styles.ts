@@ -12,19 +12,19 @@ function getTextColor(status: EquipmentStatus) {
   }
 
   if (status === 'Em manutenção') {
-    return 'var(--brand-primary)'
+    return '#002a64'
   }
 
-  return 'var(--text-muted)'
+  return '#6b7280'
 }
 
 function getBackgroundColor(status: EquipmentStatus) {
   if (status === 'Disponível') {
-    return 'var(--success-bg)'
+    return '#e6fffb'
   }
 
   if (status === 'Em manutenção') {
-    return 'var(--info-bg)'
+    return '#e6f4ff'
   }
 
   return '#f3f4f6'
@@ -39,7 +39,7 @@ function getBorderColor(status: EquipmentStatus) {
     return '#bae0ff'
   }
 
-  return 'var(--border-default)'
+  return '#dde6ee'
 }
 
 export const StatusTag = styled(Tag)<StatusTagProps>`
