@@ -18,6 +18,13 @@ import {
 
 interface EquipmentTableProps {
   equipments: Equipment[]
+
+  // AULA 06:
+  // Quando as ações da tabela ficarem reais, podemos receber callbacks por props.
+  //
+  // onViewEquipment?: (equipmentId: string) => void
+  // onEditEquipment?: (equipmentId: string) => void
+  // onRemoveEquipment?: (equipmentId: string) => void
 }
 
 const actionLabelByKey: Record<string, string> = {
@@ -27,17 +34,21 @@ const actionLabelByKey: Record<string, string> = {
 }
 
 function handleActionClick(action: string, equipmentName: string) {
+  // Por enquanto usamos alert para mostrar que o clique funciona.
+  // Na próxima etapa, essa função será trocada por navegação, modal ou confirmação.
   window.alert(
     `Ação "${actionLabelByKey[action]}" para ${equipmentName}. Vamos implementar essa parte durante a aula.`,
   )
 }
 
+// As colunas dizem para o Ant Design como a tabela deve montar cada campo.
 const columns: TableProps<Equipment>['columns'] = [
   {
     title: 'Equipamento',
     dataIndex: 'name',
     key: 'name',
     render: (_, equipment) => (
+      // Render customizado: em vez de mostrar só texto, criamos ícone + nome + ID.
       <EquipmentCell>
         <EquipmentIcon>
           <ComputerOutlined fontSize="small" />
@@ -80,6 +91,7 @@ const columns: TableProps<Equipment>['columns'] = [
     key: 'actions',
     align: 'right',
     render: (_, equipment) => (
+      // Menu de ações. Ainda está visual, mas já prepara a conversa sobre CRUD.
       <Dropdown
         trigger={['click']}
         menu={{
@@ -89,17 +101,23 @@ const columns: TableProps<Equipment>['columns'] = [
               key: 'view',
               icon: <VisibilityOutlined fontSize="small" />,
               label: 'Visualizar',
+              // AULA 06:
+              // Aqui vamos chamar onViewEquipment?.(equipment.id)
             },
             {
               key: 'edit',
               icon: <EditOutlined fontSize="small" />,
               label: 'Editar',
+              // AULA 06:
+              // Aqui vamos chamar onEditEquipment?.(equipment.id)
             },
             {
               key: 'remove',
               icon: <DeleteOutlineOutlined fontSize="small" />,
               label: 'Remover',
               danger: true,
+              // AULA 06:
+              // Aqui vamos abrir uma confirmação antes de remover.
             },
           ],
         }}
@@ -122,6 +140,7 @@ export function EquipmentTable({ equipments }: EquipmentTableProps) {
         columns={columns}
         dataSource={equipments}
         pagination={false}
+        // rowKey informa qual campo identifica cada linha de forma única.
         rowKey="id"
         scroll={{ x: 980 }}
       />

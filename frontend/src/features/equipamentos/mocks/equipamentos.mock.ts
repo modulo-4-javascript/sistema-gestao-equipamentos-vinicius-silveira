@@ -5,7 +5,8 @@ import type {
   EquipmentType,
 } from '../types/equipamento'
 
-// Este mock simula os dados que futuramente virão da API
+// Este mock simula os dados que futuramente virão da API.
+// Para a aula, mantemos poucos itens para ficar fácil enxergar o que mudou na tela.
 export const equipamentosMock: Equipment[] = [
   {
     id: 'EQP-001',
@@ -69,6 +70,46 @@ export const equipamentosMock: Equipment[] = [
   },
 ]
 
+// AULA 06 OU 07:
+// Quando criarmos a tela de detalhes, podemos começar com um mock separado.
+// Deixei a base comentada para descomentarmos junto com a turma, sem misturar
+// detalhes avançados na primeira listagem.
+//
+// export const equipamentoDetalheMock = {
+//   id: 'EQP-001',
+//   name: 'Notebook Dell',
+//   type: 'Informática',
+//   model: 'Latitude 5420',
+//   status: 'Disponível',
+//   location: 'Lab 01',
+//   serialNumber: 'DL-5420-2026',
+//   responsible: 'João Silva',
+//   createdAt: '15/01/2023',
+//   lastUpdate: 'Hoje às 14:35',
+//   notes:
+//     'Equipamento disponível para uso em aulas práticas. Última revisão realizada sem pendências.',
+// }
+
+// AULA 06 OU 07:
+// Este histórico pode alimentar uma seção lateral na futura tela de detalhes.
+//
+// export const historicoEquipamentoMock = [
+//   {
+//     id: 1,
+//     date: '24 Out 2023, 14:30',
+//     title: 'Status atualizado',
+//     description: 'Alterado de "Em manutenção" para "Disponível".',
+//   },
+//   {
+//     id: 2,
+//     date: '20 Out 2023, 09:15',
+//     title: 'Equipamento revisado',
+//     description: 'Manutenção preventiva concluída pela equipe técnica.',
+//   },
+// ]
+
+// Estes números também estão mockados.
+// Em uma API real, eles poderiam vir de um endpoint de resumo/dashboard.
 export const resumoEquipamentosMock: EquipmentSummary[] = [
   {
     id: 'total',
@@ -104,6 +145,8 @@ export const resumoEquipamentosMock: EquipmentSummary[] = [
   },
 ]
 
+// Opções usadas nos selects dos filtros.
+// Deixar separado evita repetir textos dentro do componente.
 export const statusOptions: EquipmentStatus[] = ['Disponível', 'Em manutenção', 'Inativo']
 
 export const tipoOptions: EquipmentType[] = [

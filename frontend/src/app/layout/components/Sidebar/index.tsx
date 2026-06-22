@@ -16,6 +16,7 @@ export function Sidebar() {
 
       <MenuList
         mode="inline"
+        // Destaca o item ativo de acordo com a URL atual.
         selectedKeys={[location.pathname.startsWith('/equipamentos') ? '/equipamentos' : '']}
         onClick={({ key }) => navigate(key)}
         items={[
@@ -28,6 +29,7 @@ export function Sidebar() {
             key: '/localizacoes',
             icon: <PinDropOutlined fontSize="small" />,
             label: 'Localizações',
+            // Esta tela ainda não existe. Deixamos desabilitada para a aula focar.
             disabled: true,
           },
         ]}

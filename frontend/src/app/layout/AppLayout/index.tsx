@@ -11,6 +11,7 @@ interface AppLayoutProps {
 export function AppLayout({ children, currentPage }: AppLayoutProps) {
   return (
     <PageLayout>
+      {/* Sidebar e Header ficam no layout porque aparecem em várias telas. */}
       <Sidebar />
 
       <ContentLayout>

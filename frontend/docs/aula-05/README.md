@@ -44,6 +44,27 @@ Algumas partes ficaram incompletas porque serão usadas como exercício durante 
 
 Essas lacunas são intencionais. Elas ajudam a turma a acompanhar o raciocínio sem receber uma solução grande demais logo no começo.
 
+## Blocos comentados para descomentar em aula
+
+Algumas partes futuras foram deixadas **metade encaminhadas e totalmente comentadas**. A ideia é usar esses blocos como roteiro prático, descomentando aos poucos com os alunos.
+
+Onde procurar:
+
+- `pages/EquipamentosPage/index.tsx`: lógica de filtros, base do modal/formulário e futuras ações de edição.
+- `app/routes.tsx`: futura rota de detalhes do equipamento.
+- `mocks/equipamentos.mock.ts`: mock de detalhes e mock de histórico recente.
+- `types/equipamento.ts`: tipos futuros para detalhes e histórico.
+- `components/EquipmentTable/index.tsx`: callbacks futuros das ações da tabela.
+- `components/EquipmentFilters/index.tsx`: possível botão de busca manual.
+
+Como conduzir:
+
+1. Primeiro rode a tela como está.
+2. Depois descomente um bloco pequeno.
+3. Explique o que mudou.
+4. Rode novamente e mostre o efeito na interface.
+5. Só então avance para o próximo bloco.
+
 ## Estrutura de pastas usada
 
 A organização segue uma ideia feature-based. Tudo que pertence à feature de equipamentos fica dentro da pasta `features/equipamentos`.

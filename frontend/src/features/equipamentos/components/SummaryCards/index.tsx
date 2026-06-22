@@ -6,10 +6,12 @@ import type { EquipmentSummary, SummaryIconName } from '../../types/equipamento'
 import { CardContent, CardHeader, Grid, IconBox, Label, SummaryCard, Value } from './styles'
 
 interface SummaryCardsProps {
+  // A lista de cards vem por props para o componente não depender diretamente do mock.
   summaries: EquipmentSummary[]
 }
 
 function renderSummaryIcon(icon: SummaryIconName) {
+  // Esta função simples troca o ícone de acordo com o tipo de card.
   if (icon === 'available') {
     return <CheckCircleOutlineOutlined fontSize="small" />
   }
@@ -28,6 +30,7 @@ function renderSummaryIcon(icon: SummaryIconName) {
 export function SummaryCards({ summaries }: SummaryCardsProps) {
   return (
     <Grid aria-label="Resumo dos equipamentos">
+      {/* O map transforma cada item do mock em um card na tela. */}
       {summaries.map((summary) => (
         <SummaryCard
           key={summary.id}

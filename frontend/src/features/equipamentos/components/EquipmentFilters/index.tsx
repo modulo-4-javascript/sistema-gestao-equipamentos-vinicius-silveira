@@ -4,6 +4,8 @@ import type { EquipmentStatus, EquipmentType } from '../../types/equipamento'
 import { Field, FieldLabel, FilterCard, FiltersGrid } from './styles'
 
 interface EquipmentFiltersProps {
+  // Estes valores vêm da página principal.
+  // Assim, a página continua sendo dona dos filtros.
   searchText: string
   selectedStatus?: EquipmentStatus
   selectedType?: EquipmentType
@@ -36,6 +38,7 @@ export function EquipmentFilters({
             prefix={<SearchOutlined fontSize="small" />}
             placeholder="Nome, modelo ou ID..."
             value={searchText}
+            // A cada digitação, avisamos a página para atualizar o estado da busca.
             onChange={(event) => onSearchChange(event.target.value)}
           />
         </Field>
@@ -46,6 +49,7 @@ export function EquipmentFilters({
             allowClear
             placeholder="Todos"
             value={selectedStatus}
+            // O Select chama esta função quando o usuário escolhe ou limpa um status.
             onChange={(value?: EquipmentStatus) => onStatusChange(value)}
             options={statusOptions.map((status) => ({
               label: status,
@@ -61,6 +65,7 @@ export function EquipmentFilters({
             allowClear
             placeholder="Selecione um tipo..."
             value={selectedType}
+            // O tipo também fica salvo na página principal.
             onChange={(value?: EquipmentType) => onTypeChange(value)}
             options={typeOptions.map((type) => ({
               label: type,
@@ -71,6 +76,15 @@ export function EquipmentFilters({
         </Field>
 
         <Button onClick={onClear}>Limpar filtros</Button>
+
+        {/* AULA 06:
+            Podemos adicionar um botão de busca manual se quisermos mostrar
+            a diferença entre filtro automático e filtro por clique.
+
+            <Button type="primary" onClick={onApplyFilters}>
+              Buscar
+            </Button>
+        */}
       </FiltersGrid>
     </FilterCard>
   )
